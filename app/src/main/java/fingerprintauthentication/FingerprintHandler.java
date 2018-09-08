@@ -1,12 +1,15 @@
 package fingerprintauthentication;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.hardware.fingerprint.FingerprintManager;
 import android.Manifest;
 import android.os.CancellationSignal;
 import android.support.v4.app.ActivityCompat;
 import android.widget.Toast;
+
+import guru.ahad.fingerprintnotepad.NotepadActivity;
 
 
 public class FingerprintHandler extends FingerprintManager.AuthenticationCallback {
@@ -59,8 +62,10 @@ public class FingerprintHandler extends FingerprintManager.AuthenticationCallbac
         Toast.makeText(context,
                 "Success!",
                 Toast.LENGTH_LONG).show();
-            x = true;
+        this.context.startActivity(new Intent(this.context,NotepadActivity.class));
+
     }
+
 
 
 

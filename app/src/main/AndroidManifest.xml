@@ -18,10 +18,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".NotepadActivity"
-            android:label="@string/title_activity_notepad"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".NotepadActivity"></activity>
     </application>
 
 </manifest>
